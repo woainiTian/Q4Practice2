@@ -8,14 +8,44 @@
 
 <body>
         <h1>Switch Statement</h1>
+        <button class="btn btn-info" onclick = "teamRank()">Rank</button>
 
         <script>
+            
+            function teamRank(){
+            var rank = "1st";
+
+            var message = ""; //empty value for the var message so it will be filled with whichever case matches.
+
+            switch (true){ //use true instead of rank bc we'll determine in the cases if its true or false. so it will run which is true among the cases.
+
+            case (rank === "1st"): //compare. gives --> true!. Thise code will run!
+                message = "Champions!";
+                break;
+            case (rank === "2nd"): 
+                message = "Second Placer!";
+                break;
+            case (rank === "3rd"): 
+                message = "Third Placer!";
+                break;
+            case (rank === "4th"): 
+                message = "Fourth Placer!";
+                break;
+            default:
+                message = "Rank not available.";
+            }
+            alert(message);
+            //we put the variable "message" in the alert bc it holds the actual message that we assigned based on which case it matches.
+            }
+            
+            
+            
             let team = "Yellow"; //start by declaring a variable and give it a value.
 
             switch (team){
                 
                 case "Yellow": 
-                alert("Go Yellow Tiger!");
+                alert("Go Yellow Tigers!");
                 break; 
                 //the variable is a string, so the case is also string.
 
@@ -35,6 +65,7 @@
                     alert("Team could not be determined.")
                 //shows up when no match.b 
             }
+
         </script>
 
 
